@@ -5,6 +5,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenu } from "react-icons/bi";
 import { useTheme } from "next-themes";
+import ActiveLink from "./isActiveLink";
 
 type Props = {};
 
@@ -55,12 +56,14 @@ const Navbar = (props: Props) => {
               key={index}
               href={navLink.link}
             >
-              <li
-                className="cursor-pointer hover:underline my-5 md:my-0 "
-                key={index}
-              >
-                {navLink.name}
-              </li>
+              <ActiveLink href={navLink.link}>
+                <li
+                  className="cursor-pointer hover:underline my-5 md:my-0 "
+                  key={index}
+                >
+                  {navLink.name}
+                </li>
+              </ActiveLink>
             </Link>
           ))}
           <a
