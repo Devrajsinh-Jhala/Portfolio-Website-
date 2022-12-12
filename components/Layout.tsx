@@ -24,7 +24,7 @@ const Layout = ({ children }: Props) => {
         />
       </Head>
 
-      <header className="max-w-[850px] text-lg mx-auto w-[100%]">
+      <header className="max-w-[850px] bg-light dark:bg-dark text-lg mx-auto w-[100%]">
         <Navbar />
       </header>
 

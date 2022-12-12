@@ -34,7 +34,7 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      <nav className="my-10 px-4 py-2 border border-black dark:border-white rounded-full flex items-center justify-between">
+      <nav className="my-10 px-4  py-2 border border-black dark:border-white rounded-full flex items-center justify-between">
         <Link onClick={() => setOpen(false)} href={"/"}>
           <p className="">Devraj Jhala</p>
         </Link>
@@ -45,9 +45,9 @@ const Navbar = (props: Props) => {
           {open ? <AiOutlineClose /> : <BiMenu />}
         </span>
         <ul
-          className={` top-32 transition-all duration-500 ease-in ${
+          className={` top-32 ${
             open ? "block" : "hidden"
-          } left-0 w-full md:w-auto md:pl-0 pl-9 fixed md:static pb-12 md:pb-0 md:flex md:items-center md:justify-between  md:space-x-10 bg-light dark:bg-dark  `}
+          } left-0 w-full text-center md:w-auto md:pl-0 pl-9 fixed md:static pb-12 md:pb-0 md:flex md:items-center md:justify-between  md:space-x-10 bg-light dark:bg-dark  `}
         >
           {navLinks.map((navLink, index) => (
             <Link
@@ -63,7 +63,11 @@ const Navbar = (props: Props) => {
               </li>
             </Link>
           ))}
-          <a target={"_blank"} href="https://devraj-jhala.hashnode.dev/">
+          <a
+            className="flex items-center justify-center"
+            target={"_blank"}
+            href="https://devraj-jhala.hashnode.dev/"
+          >
             <li className="cursor-pointer hover:underline  flex">
               Blog{" "}
               <span className="mt-[4px] ">
@@ -71,7 +75,10 @@ const Navbar = (props: Props) => {
               </span>
             </li>
           </a>
-          <div onClick={() => setOpen(false)} className="mt-5 md:mt-0">
+          <div
+            onClick={() => setOpen(false)}
+            className="mt-5 md:mt-0 flex items-center justify-center"
+          >
             {currentTheme === "dark" ? (
               <BsFillSunFill
                 onClick={() => setTheme("light")}
