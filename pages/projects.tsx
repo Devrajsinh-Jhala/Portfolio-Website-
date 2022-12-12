@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectsCard from "../components/ProjectsCard";
 import { MdComputer } from "react-icons/md";
-import { GetStaticProps } from "next";
+import { GetServerSideProps, GetStaticProps } from "next";
 import { Projects } from "../typings";
 
 type Props = {
@@ -33,7 +33,7 @@ const Projects = ({ projects }: Props) => {
 
 export default Projects;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const projectres = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`
   );

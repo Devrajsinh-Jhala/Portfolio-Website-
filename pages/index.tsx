@@ -1,4 +1,4 @@
-import type { GetStaticProps } from "next";
+import type { GetServerSideProps, GetStaticProps } from "next";
 import Blog from "../containers/Blog";
 import ContactSection from "../containers/ContactSection";
 import Header from "../containers/Header";
@@ -24,7 +24,7 @@ const Home = ({ homeInfo, projects, blogInfo }: Props) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getHomeInfo`
   );
