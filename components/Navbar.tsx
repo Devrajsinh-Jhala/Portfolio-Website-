@@ -22,6 +22,7 @@ const Navbar = (props: Props) => {
 
   useEffect(() => {
     setMounted(true);
+    setOpen(false);
   }, []);
 
   if (!mounted) {
@@ -29,26 +30,31 @@ const Navbar = (props: Props) => {
   }
 
   const currentTheme = theme === "system" ? systemTheme : theme;
+  console.log(open);
 
   return (
     <>
       <nav className="my-10 px-4 py-2 border border-black dark:border-white rounded-full flex items-center justify-between">
-        <Link href={"/"}>
+        <Link onClick={() => setOpen(false)} href={"/"}>
           <p className="">Devraj Jhala</p>
         </Link>
         <span
           onClick={() => setOpen(!open)}
           className="text-3xl cursor-pointer block md:hidden"
         >
-          {open ? <BiMenu /> : <AiOutlineClose />}
+          {open ? <AiOutlineClose /> : <BiMenu />}
         </span>
         <ul
           className={` top-32 transition-all duration-500 ease-in ${
-            open ? "hidden" : "block"
+            open ? "block" : "hidden"
           } left-0 w-full md:w-auto md:pl-0 pl-9 fixed md:static pb-12 md:pb-0 md:flex md:items-center md:justify-between  md:space-x-10 bg-light dark:bg-dark  `}
         >
           {navLinks.map((navLink, index) => (
-            <Link key={index} href={navLink.link}>
+            <Link
+              onClick={() => setOpen(false)}
+              key={index}
+              href={navLink.link}
+            >
               <li
                 className="cursor-pointer hover:underline my-5 md:my-0 "
                 key={index}
@@ -65,7 +71,7 @@ const Navbar = (props: Props) => {
               </span>
             </li>
           </a>
-          <div className="mt-5 md:mt-0">
+          <div onClick={() => setOpen(false)} className="mt-5 md:mt-0">
             {currentTheme === "dark" ? (
               <BsFillSunFill
                 onClick={() => setTheme("light")}
