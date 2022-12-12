@@ -3,7 +3,6 @@ import ProjectsCard from "../components/ProjectsCard";
 import { MdComputer } from "react-icons/md";
 import { GetStaticProps } from "next";
 import { Projects } from "../typings";
-import { fetchProjects } from "../utils/fetchProjects";
 
 type Props = {
   projects: Projects[];
@@ -23,8 +22,8 @@ const Projects = ({ projects }: Props) => {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         {projects.map((project) => (
-          <div className="col-span-1">
-            <ProjectsCard key={project._id} project={project} />
+          <div key={project._id} className="col-span-1">
+            <ProjectsCard project={project} />
           </div>
         ))}
       </div>
@@ -35,7 +34,12 @@ const Projects = ({ projects }: Props) => {
 export default Projects;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const projects: Projects[] = await fetchProjects();
+  const projectres = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`
+  );
+
+  const projectdata = await projectres.json();
+  const projects: Projects[] = projectdata.projects;
 
   return {
     props: {

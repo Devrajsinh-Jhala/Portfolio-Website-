@@ -4,9 +4,6 @@ import ContactSection from "../containers/ContactSection";
 import Header from "../containers/Header";
 import Work from "../containers/Projects";
 import { BlogInfo, HomeInfo, Projects } from "../typings";
-import { fetchBlogInfo } from "../utils/fetchBlogInfo";
-import { fetchHomeInfo } from "../utils/fetchHomeInfo";
-import { fetchProjects } from "../utils/fetchProjects";
 
 type Props = {
   homeInfo: HomeInfo;
@@ -28,9 +25,26 @@ const Home = ({ homeInfo, projects, blogInfo }: Props) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const homeInfo: HomeInfo = await fetchHomeInfo();
-  const projects: Projects[] = await fetchProjects();
-  const blogInfo: BlogInfo[] = await fetchBlogInfo();
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getHomeInfo`
+  );
+
+  const data = await res.json();
+  const homeInfo: HomeInfo = data.homeInfo[0];
+
+  const blogres = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getBlogInfo`
+  );
+
+  const blogdata = await blogres.json();
+  const blogInfo: BlogInfo[] = blogdata.blogInfo;
+
+  const projectres = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`
+  );
+
+  const projectdata = await projectres.json();
+  const projects: Projects[] = projectdata.projects;
 
   return {
     props: {
