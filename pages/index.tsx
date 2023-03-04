@@ -25,22 +25,20 @@ const Home = ({ homeInfo, projects, blogInfo }: Props) => {
 export default Home;
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getHomeInfo`
-  );
+  const res = await fetch(`https://devraj-jhala.vercel.app/api/getHomeInfo`);
 
   const data = await res.json();
   const homeInfo: HomeInfo = data.homeInfo[0];
 
   const blogres = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getBlogInfo`
+    `https://devraj-jhala.vercel.app/api/getBlogInfo`
   );
 
   const blogdata = await blogres.json();
   const blogInfo: BlogInfo[] = blogdata.blogInfo;
 
   const projectres = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`
+    `https://devraj-jhala.vercel.app/api/getProjects`
   );
 
   const projectdata = await projectres.json();
