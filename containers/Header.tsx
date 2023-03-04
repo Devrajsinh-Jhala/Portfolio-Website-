@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import Button from "../components/Button";
 import { HomeInfo } from "../typings";
@@ -26,10 +27,19 @@ const Header = ({ homeInfo }: Props) => {
       </div>
       {/* Image */}
 
-      <img
+      {/* <img
         className="rounded-full border-2 shadow-lg border-white w-36 h-36"
-        src="https://media-exp1.licdn.com/dms/image/C4D03AQGzOhPWOqYTQA/profile-displayphoto-shrink_400_400/0/1655304743647?e=1674086400&v=beta&t=u-4QYk5OWqp8wfmtheQwjW2ksAs5nNTP2udiq3S03Hc"
+        src={"./devraj.jpeg"}
         alt="Devraj's"
+      /> */}
+      <Image
+        src={
+          "https://media.licdn.com/dms/image/C4D03AQGzOhPWOqYTQA/profile-displayphoto-shrink_400_400/0/1655304743647?e=1683158400&v=beta&t=_OWYmDOqoQQY_TjGmdQJwlc6VkhCYVv1PjBbWwY-rHk"
+        }
+        className="rounded-full border-2 shadow-lg border-white w-36 h-36"
+        alt="Devraj's"
+        width={36}
+        height={36}
       />
     </header>
   );

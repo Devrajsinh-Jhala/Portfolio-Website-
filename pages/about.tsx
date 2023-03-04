@@ -8,7 +8,7 @@ const About = (props: Props) => {
   return (
     <>
       <Head>
-        <title>About Me</title>
+        <title>Devraj Jhala | About Me</title>
       </Head>
       <section className="flex flex-col space-y-10">
         <div className="">
