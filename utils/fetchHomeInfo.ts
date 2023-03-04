@@ -2,7 +2,7 @@ import { HomeInfo } from "../typings";
 
 export const fetchHomeInfo = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getHomeInfo`
+    `https://devraj-jhala.vercel.app/api/getHomeInfo`
   );
 
   const data = await res.json();

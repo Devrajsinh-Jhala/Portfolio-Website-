@@ -2,7 +2,7 @@ import { BlogInfo } from "../typings";
 
 export const fetchBlogInfo = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getBlogInfo`
+    `https://devraj-jhala.vercel.app/api/getBlogInfo`
   );
 
   const data = await res.json();
