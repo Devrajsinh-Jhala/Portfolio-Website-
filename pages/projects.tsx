@@ -41,7 +41,7 @@ export default Projects;
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const projectres = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`
+    `https://devraj-jhala.vercel.app/api/getProjects`
   );
 
   const projectdata = await projectres.json();
