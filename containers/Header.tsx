@@ -20,7 +20,7 @@ const Header = ({ homeInfo }: Props) => {
         <a
           rel="noopener noreferer"
           target={"_blank"}
-          href="https://pdfhost.io/v/JLzF.aYKL_My_Resume"
+          href="https://drive.google.com/file/d/1si0Xv-xyDAJxyU4UirXhPHHZzI7Z8mwR/view"
         >
           <Button buttonText="View Resume" />
         </a>
