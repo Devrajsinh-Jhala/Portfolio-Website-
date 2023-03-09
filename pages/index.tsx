@@ -1,9 +1,13 @@
-import type { GetServerSideProps, GetStaticProps } from "next";
+import type { GetServerSideProps } from "next";
 import Blog from "../containers/Blog";
 import ContactSection from "../containers/ContactSection";
+import Experience from "../containers/Experience";
 import Header from "../containers/Header";
 import Work from "../containers/Projects";
-import { BlogInfo, HomeInfo, Projects } from "../typings";
+import Skills from "../containers/Skills";
+import { BlogInfo } from "../typings";
+import { HomeInfo } from "../typings";
+import { Projects } from "../typings";
 
 type Props = {
   homeInfo: HomeInfo;
@@ -16,6 +20,8 @@ const Home = ({ homeInfo, projects, blogInfo }: Props) => {
     <>
       <Header homeInfo={homeInfo} />
       <Work projects={projects} />
+      <Experience />
+      <Skills />
       <Blog blogInfo={blogInfo} />
       <ContactSection />
     </>

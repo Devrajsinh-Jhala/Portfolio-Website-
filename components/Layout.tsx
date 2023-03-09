@@ -28,7 +28,7 @@ const Layout = ({ children }: Props) => {
         <Navbar />
       </header>
 
-      <main className="max-w-[700px] mx-auto w-[100%]">{children}</main>
+      <main className="max-w-[800px] mx-auto w-[100%]">{children}</main>
 
       <footer className="max-w-[850px] mx-auto w-[100%]">
         <Footer />

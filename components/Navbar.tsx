@@ -56,14 +56,12 @@ const Navbar = (props: Props) => {
               key={index}
               href={navLink.link}
             >
-              <ActiveLink href={navLink.link}>
-                <li
-                  className="cursor-pointer hover:underline my-5 md:my-0 "
-                  key={index}
-                >
-                  {navLink.name}
-                </li>
-              </ActiveLink>
+              <li
+                className="cursor-pointer hover:underline my-5 md:my-0 "
+                key={index}
+              >
+                {navLink.name}
+              </li>
             </Link>
           ))}
           <a

@@ -2,6 +2,8 @@ import React from "react";
 import Button from "../components/Button";
 import Head from "next/head";
 
+import Test from "../components/Test";
+
 type Props = {};
 
 const About = (props: Props) => {
