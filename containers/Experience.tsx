@@ -64,7 +64,7 @@ const ExperienceCard = ({ experience }: Props) => {
 const Experience = () => {
   return (
     <div className="px-5 sm:px-0">
-      <div className="dark:text-white text-black mt-24 sm:pl-10">
+      <div className="dark:text-white text-black mt-24 sm:pl-14">
         <p className="text-xs mb-2">WHAT I HAVE DONE SO FAR</p>
         <p className="text-5xl font-bold">Work Experience</p>
       </div>

@@ -10,7 +10,7 @@ type Props = {
 const Blog = ({ blogInfo }: Props) => {
   return (
     <div className="px-5 sm:px-0">
-      <div className="dark:text-white text-black mt-24 sm:pl-10">
+      <div className="dark:text-white text-black mt-24 sm:pl-14">
         <p className="text-xs mb-2">SOME OF MY WRITINGS</p>
         <p className="text-5xl font-bold">My Blogs</p>
         <p className="max-w-[500px] w-full my-3 text-sm">
@@ -19,7 +19,7 @@ const Blog = ({ blogInfo }: Props) => {
           readers.
         </p>
       </div>
-      <section className="flex flex-col sm:pl-10 mt-10">
+      <section className="flex flex-col sm:pl-14 mt-10">
         <div className="grid grid-cols-1 gap-8 ">
           {blogInfo.map((blogInfo) => (
             <div key={blogInfo._id}>

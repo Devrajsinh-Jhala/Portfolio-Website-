@@ -7,7 +7,6 @@ const Document = (props: Props) => {
   return (
     <Html>
       <Head>
-        <title>Devraj Jhala</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
