@@ -20,6 +20,6 @@
   }
 
   .contactInput {
-    @apply outline-none bg-slate-100 rounded-sm border-b px-4 py-4 border-white text-gray-800 placeholder-gray-800;
+    @apply outline-none w-full md:w-[300px] bg-slate-100 rounded-sm border-b px-4 py-4 border-white text-gray-800 placeholder-gray-800;
   }
 }

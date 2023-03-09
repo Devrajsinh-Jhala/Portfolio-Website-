@@ -35,4 +35,7 @@ export interface BlogInfo extends SanityBody {
   blogHeading: string;
   blogImage: Image;
   blogLink: string;
+  blogDescription: string;
+  blogViews: string;
+  date: string;
 }

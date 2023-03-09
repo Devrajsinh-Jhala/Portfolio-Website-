@@ -10,7 +10,7 @@ type Props = {
 
 const Projects = ({ projects }: Props) => {
   return (
-    <>
+    <div className="px-5 sm:px-0">
       <div className="dark:text-white text-black mt-24 sm:pl-14">
         <p className="text-xs mb-2">WHAT I HAVE BUILT</p>
         <p className="text-5xl font-bold">Projects</p>
@@ -22,7 +22,7 @@ const Projects = ({ projects }: Props) => {
         </p>
       </div>
       <section className="mb-10 mt-10 flex flex-col items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {projects.map((project, i) => (
             <div key={i} className="cols-span-1">
               <ProjectsCard project={project} />
@@ -38,7 +38,7 @@ const Projects = ({ projects }: Props) => {
           </li>
         </Link>
       </section>
-    </>
+    </div>
   );
 };
 

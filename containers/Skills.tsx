@@ -21,7 +21,7 @@ const Skills = (props: Props) => {
   return (
     <section className="my-20">
       {/* Skill Icons */}
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7  gap-5 gap-y-7">
+      <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7  gap-5 gap-y-7">
         <div className="col-span-1">
           <SkillIcon icon={html.src} name="HTML" />
         </div>

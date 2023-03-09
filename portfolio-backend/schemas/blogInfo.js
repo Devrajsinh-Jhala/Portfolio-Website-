@@ -15,6 +15,21 @@ export default {
       type: "string",
     },
     {
+      name: "blogDescription",
+      title: "Blog Description",
+      type: "string",
+    },
+    {
+      name: "blogViews",
+      title: "Blog Views",
+      type: "string",
+    },
+    {
+      name: "date",
+      title: "Date",
+      type: "date",
+    },
+    {
       name: "blogLink",
       title: "Blog Link",
       type: "string",
