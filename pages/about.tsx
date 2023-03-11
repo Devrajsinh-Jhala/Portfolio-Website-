@@ -61,6 +61,43 @@ const About = (props: Props) => {
             always be a new and optimized stack coming up.
           </p>
         </div>
+        <div>
+          <h1 className="text-xl font-semibold my-2 bg-red-200 dark:bg-dark w-fit">
+            What am I currently doing ?
+          </h1>
+          <p>
+            As a pre final year undergraduate, I am actively looking for
+            internships or similar opportunities. Apart from I am also
+            practicing Data Structures and Algorithms and little bit of
+            Competitive Coding. You can check my{" "}
+            <span>
+              <a
+                href="https://leetcode.com/user4216Zd/"
+                target={"_blank"}
+                rel="noopener noreferrer"
+                className="text-blue-500 underline"
+              >
+                LeetCode
+              </a>
+            </span>{" "}
+            and{" "}
+            <span>
+              <a
+                target={"_blank"}
+                rel="noopener noreferrer"
+                href="https://www.codechef.com/users/noob_comdar"
+                className="text-blue-500 underline"
+              >
+                CodeChef
+              </a>
+            </span>{" "}
+            profiles further. I also write blogs on hashnode (not consistent
+            though 😜 but I try my best to be 😊). Apart from this I am also
+            learning new technologies such as Docker, Prisma, Vite Testing etc.
+            and building more and more challenging projects to keep my skills in
+            check. You can reach me out via the mail as well
+          </p>
+        </div>
       </section>
     </>
   );
